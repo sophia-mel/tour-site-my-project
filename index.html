@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Traveling with us</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header class="header">
+        <h1 class="header__title">Traveling with us</h1>
+        <nav class="header__nav">
+            <ul class="header__nav-list">
+                <li class="header__nav-item">
+                    <a href="#about" class="header__nav-link">About</a>
+                </li>
+                <li class="header__nav-item">
+                    <a href="#plan_tour" class="header__nav-link">Plan a tour</a>
+                </li>
+                <li class="header__nav-item">
+                    <a href="#order_tour" class="header__nav-link">Order Tour</a>
+                </li>
+                <li class="header__nav-item">
+                    <a href="#experience" class="header__nav-link">Experiences</a>
+                </li>
+                <li class="header__nav-item">
+                    <button class="header__nav-link cart-button">Cart (0)</button>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main">
+
+        <section class="section section-1" id="about">
+            <div class="section__content">
+                <div class="section__text">
+                    <h2 class="section__title"> We help discover amazing destinations for you</h2>
+                    <ul class="section__list">
+                        <li>Experience diverse cultures and traditions</li>
+                        <li>Visit world-renowned landmarks and natural wonders</li>
+                        <li>Explore hidden gems off the beaten path</li>
+                        <li>Immerse yourself in local cuisines and flavors</li>
+                        <li>Create unforgettable memories with loved ones</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section class="section section-2" id="plan_tour">
+            <div class="section__content">
+                <div class="section__text">
+                    <h2 class="section__title">Plan Your Perfect Trip</h2>
+                    <ul class="section__list">
+                        <li>
+                            Get personalized recommendations based on your preferences
+                        </li>
+                        <li>Compare prices and find the best deals</li>
+                        <li>Book flights, accommodations, and activities seamlessly</li>
+                        <li>Stay organized with itineraries and travel documents</li>
+                        <li>Enjoy peace of mind with 24/7 customer support</li>
+
+                    </ul>
+                </div>
+                <button class="section__button section__button-2">Plan a tour</button>
+            </div>
+        </section>
+
+        <section class="tour-cards" id="order_tour">
+        </section>
+
+        <section class="section section-3" id="experience">
+            <div class="section__content">
+                <div class="section__text">
+                    <h2 class="section__title">Share Your Experiences</h2>
+                    <ul class="section__list">
+                        <li>Connect with fellow travelers around the world</li>
+                        <li>Share your stories, tips, and recommendations</li>
+                        <li>Upload photos and videos of your adventures</li>
+                        <li>Participate in forums and discussions</li>
+                        <li>Inspire others to embark on their own journeys</li>
+                    </ul>
+                </div>
+                <button class="section__button section__button-3">Share</button>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p class="footer__text">
+            Traveling with us &copy; 2024. All Rights Reserved.
+        </p>
+    </footer>
+
+
+    <div class="modal" id="tourModal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2 id="modalTitle"></h2>
+            <p id="modalDescription"></p>
+            <p><strong>Price:</strong> <span id="modalPrice"></span></p>
+            <p><strong>Duration:</strong> <span id="modalDuration"></span> days</p>
+        </div>
+    </div>
+
+
+    <div class="cart-modal" style="display:none;">
+        <div class="cart-modal__content">
+            <h2>Your Cart</h2>
+            <div class="cart-items">
+            </div>
+            <div class="cart-total">
+                Total: <span class="cart-total__value">0</span>
+            </div>
+            <button class="cart-modal__close">Close</button>
+        </div>
+    </div>
+
+    <div class="plan_tour_modal" id="planTourModal">
+        <div class="plan_tour_modal_content">
+            <span class="plan_tour_close">&times;</span>
+            <h2>Plan your tour with us!</h2>
+            <p id="modalDescription">Please leave your number in the field below and we will contact you in 5 minutes to
+                discuss the tour of your dream with you.</p>
+            <form id='userForm'>
+                <label for="phone">Phone number:</label>
+                <input type="tel" id="phone" name="phone" placeholder="+1 (555) 555-5555" required>
+                <button class="tour_modal_send" type="submit">Send</button>
+            </form>
+        </div>
+    </div>
+
+
+    <div class="feedback_modal" id="feedbackModal">
+        <div class="feedback_modal_content">
+            <span class="feedback_close">&times;</span>
+            <h2>Share Your Feedback</h2>
+            <form id="feedbackForm">
+                <label for="email">Your Email:</label>
+                <input type="email" id="email" name="email" placeholder="john.smith@example.com" required>
+                <br>
+                <label for="message">Your Feedback:</label><br>
+                <textarea id="message" name="message" placeholder="Share your stories, tips, and recommendations..."
+                    rows="5" required></textarea>
+                <br>
+                <button class="feedback_share" type="submit">Share</button>
+            </form>
+        </div>
+    </div>
+
+</body>
+
+<script src="js/feedback.js" defer></script>
+<script src="js/plan_tour.js" defer></script>
+<script src="js/more_info.js" defer></script>
+<script src="js/render_tours.js" defer></script>
+<script src="js/cart.js" defer></script>
+
+</html>
